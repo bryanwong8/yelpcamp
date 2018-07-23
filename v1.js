@@ -17,8 +17,10 @@ var Comment       = require("./models/comment"),
 var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     authRoutes       = require("./routes/index");
-    
-mongoose.connect("process.env.DATABASEURL");
+
+var url = process.env.process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v13";
+mongoose.connect(url);
+
 // mongoose.connect("mongodb://bmwong:Hearthstone1@ds145871.mlab.com:45871/yelpcampv13bmw");
 process.env.databaseURL
 //uses body parser
