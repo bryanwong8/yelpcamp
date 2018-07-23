@@ -18,11 +18,10 @@ var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     authRoutes       = require("./routes/index");
     
-// // console.log(process.env.DATABASEURL);
-// var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v13";
-// mongoose.connect(url);
+// console.log(process.env.DATABASEURL);
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v13";
+mongoose.connect(url);
 
-mongoose.connect("mongodb://bmwong:Hearthstone1@ds145871.mlab.com:45871/yelpcampv13bmw");
 //uses body parser
 app.use(bodyParser.urlencoded({extended: true}));
 //Connects stylesheets
